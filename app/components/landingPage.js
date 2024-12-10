@@ -84,7 +84,7 @@ export default function LandingPage() {
         </div>
         <div className="flex flex-col items-center space-y-4">
             <div className="bg-violet-800/75 text-white p-4 rounded shadow-lg w-full max-w-lg">
-                <h2 className="text-lg font-bold font-mono mb-2">Welcome to PokeSearch!</h2>
+                <h2 className="text-lg font-bold font-mono mb-2 flex justify-center">Welcome to PokeSearch!</h2>
                 <ul className="list-disc pl-6 space-y-2 text-sm font-mono">
                     <li>
                         Use the search bar below to browse Pokémon and view their detailed stats.

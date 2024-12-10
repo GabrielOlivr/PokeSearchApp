@@ -16,7 +16,7 @@ import { useUserAuth } from "../_utils/auth-context";
 export default function CardsPage() {
   const { user } = useUserAuth();
   const [collectionData, setCollectionData] = useState([]);
-  const SHINY_CHANCE = 0.25; // 25% shiny chance, this can be adjusted if needed 
+  const SHINY_CHANCE = 0.25; // Chance of pokemon beign shiny, this can be changed if needed to 
 
   useEffect(() => {
     const fetchUsersCard = async () => {
@@ -55,11 +55,11 @@ export default function CardsPage() {
         userId: user.uid,
       };
 
-      // Save card to Firestore
+      // Save card to database
       const docRef = await addDoc(collection(db, "pokemon_inventory"), card);
       setCollectionData([...collectionData, { id: docRef.id, ...card }]);
     } catch (error) {
-      console.error("Failed to fetch or save Pokémon:", error);
+      console.error("Failed save Pokémon:", error);
     }
   };
 
